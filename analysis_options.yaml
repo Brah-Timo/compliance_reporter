@@ -1,0 +1,47 @@
+include: package:lints/recommended.yaml
+
+analyzer:
+  language:
+    strict-casts: true
+    strict-raw-types: true
+    strict-inference: true
+  errors:
+    missing_required_param: error
+    missing_return: error
+    invalid_annotation_target: ignore
+    todo: info
+  exclude:
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"
+    - "test/fixtures/**"
+
+linter:
+  rules:
+    # ── Style ──────────────────────────────────────────────────────────────
+    prefer_single_quotes: true
+    prefer_final_locals: true
+    prefer_const_constructors: true
+    prefer_const_declarations: true
+    prefer_const_literals_to_create_immutables: true
+    sort_unnamed_constructors_first: true
+    avoid_print: true
+    use_super_parameters: true
+    require_trailing_commas: true
+
+    # ── Safety ─────────────────────────────────────────────────────────────
+    avoid_dynamic_calls: true
+    avoid_catches_without_on_clauses: false
+    cancel_subscriptions: true
+    close_sinks: true
+    avoid_slow_async_io: true
+    avoid_returning_null_for_future: true
+
+    # ── Performance ────────────────────────────────────────────────────────
+    prefer_for_elements_to_map_fromIterable: true
+    use_string_buffers: true
+    avoid_function_literals_in_foreach_calls: true
+    prefer_collection_literals: true
+
+    # ── Null safety ────────────────────────────────────────────────────────
+    unnecessary_null_checks: true
+    unnecessary_nullable_for_final_variable_declarations: true
