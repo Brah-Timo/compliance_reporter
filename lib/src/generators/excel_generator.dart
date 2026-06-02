@@ -392,10 +392,12 @@ class ExcelGenerator extends BaseReportGenerator {
     );
     final cell = sheet.cell(cellIndex);
     cell.value = TextCellValue(value);
-    final style = CellStyle(bold: bold, fontSize: fontSize);
-    if (bgColor != null) style.backgroundColorHex = bgColor;
-    if (fontColor != null) style.fontColorHex = fontColor;
-    cell.cellStyle = style;
+    cell.cellStyle = CellStyle(
+      bold: bold,
+      fontSize: fontSize,
+      backgroundColorHex: bgColor ?? ExcelColor.none,
+      fontColorHex: fontColor ?? ExcelColor.black,
+    );
   }
 
   void _mergeWrite(

@@ -672,13 +672,6 @@ class PdfGenerator extends BaseReportGenerator {
     return PdfColors.blueGrey800;
   }
 
-  static PdfColor _riskBgColor(RiskLevel level) => switch (level) {
-        RiskLevel.critical => PdfColor(1, 0.92, 0.92),
-        RiskLevel.high => PdfColor(1, 0.96, 0.88),
-        RiskLevel.medium => PdfColor(1, 1, 0.88),
-        RiskLevel.low => PdfColors.white,
-      };
-
   static String _fmtDuration(int secs) {
     final h = secs ~/ 3600;
     final m = (secs % 3600) ~/ 60;

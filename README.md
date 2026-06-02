@@ -13,7 +13,7 @@
 
 
 
-<img src="assets/images/compliance_reporter.jpg" width="1537" height="1023">
+<img src="assets/images/compliance_reporter.jpg" width="696" height="375">
 
 
 

@@ -110,17 +110,21 @@ class DataAnonymizer {
   }
 
   List<UserAction> _anonymizeActions(List<UserAction> actions) {
-    return actions.map((a) => UserAction(
-          action: a.action, // action code kept
-          resourceType: a.resourceType, // resource type kept
-          resourceId: a.resourceId != null
-              ? _pseudonymise(a.resourceId!)
-              : null, // ID pseudonymised
-          timestamp: a.timestamp,
-          isSensitive: a.isSensitive,
-          httpMethod: a.httpMethod,
-          httpStatus: a.httpStatus,
-          metadata: const {}, // metadata cleared
-        )).toList();
+    return actions
+        .map(
+          (a) => UserAction(
+            action: a.action, // action code kept
+            resourceType: a.resourceType, // resource type kept
+            resourceId: a.resourceId != null
+                ? _pseudonymise(a.resourceId!)
+                : null, // ID pseudonymised
+            timestamp: a.timestamp,
+            isSensitive: a.isSensitive,
+            httpMethod: a.httpMethod,
+            httpStatus: a.httpStatus,
+            metadata: const {}, // metadata cleared
+          ),
+        )
+        .toList();
   }
 }

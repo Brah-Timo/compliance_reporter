@@ -7,6 +7,16 @@ Versioning follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ---
 
+## [1.0.1] — 2026-06-02
+
+### Fixed
+
+* Fixed report generation failure when an empty log collection was provided with `allowEmptyReports=true`
+* Fixed metadata timestamp serialization inconsistency across UTC/local timezones
+* Fixed risk summary totals occasionally differing from exported report values
+
+---
+
 ## [1.0.0] — 2026-06-01
 
 ### Added

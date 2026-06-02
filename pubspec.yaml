@@ -3,7 +3,7 @@ description: >
   Production-grade Dart package for generating compliance audit reports in PDF and Excel. Includes access logs, activity tracking, anomaly detection, risk scoring, and support for GDPR, SOC 2, ISO 27001, PCI-DSS, and HIPAA. Works on Flutter and standalone Dart backends.
 
 
-version: 1.0.0
+version: 1.0.1
 repository: https://github.com/Brah-Timo/compliance_reporter
 issue_tracker: https://github.com/Brah-Timo/compliance_reporter/issues
 

@@ -142,20 +142,24 @@ class EmailExporter {
     final attachments = <_Attachment>[];
 
     if (result.pdfBytes != null) {
-      attachments.add(_Attachment(
-        filename: 'audit_report_${result.from.toIso8601String().substring(0, 10)}.pdf',
-        mimeType: 'application/pdf',
-        bytes: result.pdfBytes!,
-      ));
+      attachments.add(
+        _Attachment(
+          filename: 'audit_report_${result.from.toIso8601String().substring(0, 10)}.pdf',
+          mimeType: 'application/pdf',
+          bytes: result.pdfBytes!,
+        ),
+      );
     }
 
     if (result.excelBytes != null) {
-      attachments.add(_Attachment(
-        filename: 'audit_report_${result.from.toIso8601String().substring(0, 10)}.xlsx',
-        mimeType:
-            'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
-        bytes: result.excelBytes!,
-      ));
+      attachments.add(
+        _Attachment(
+          filename: 'audit_report_${result.from.toIso8601String().substring(0, 10)}.xlsx',
+          mimeType:
+              'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+          bytes: result.excelBytes!,
+        ),
+      );
     }
 
     if (attachments.isEmpty) return false;

@@ -167,7 +167,7 @@ class HttpLogCollector extends BaseLogCollector {
       list = decoded;
     } else if (decoded is Map<String, dynamic>) {
       // Try common envelope keys
-      final decodedMap = decoded as Map<String, dynamic>;
+      final decodedMap = decoded;
       final key = ['data', 'items', 'logs', 'results', 'records']
           .firstWhere((k) => decodedMap.containsKey(k), orElse: () => '');
       if (key.isEmpty || decodedMap[key] is! List) {

@@ -144,9 +144,11 @@ class RiskAnalyzer {
     if (hasSensitive) {
       score += 20;
       final sensitiveList = log.actions
-          .where((a) => sensitiveActions.any(
-                (s) => a.action.toUpperCase().contains(s),
-              ))
+          .where(
+            (a) => sensitiveActions.any(
+              (s) => a.action.toUpperCase().contains(s),
+            ),
+          )
           .map((a) => a.action)
           .take(3)
           .join(', ');

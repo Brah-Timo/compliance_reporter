@@ -100,7 +100,8 @@ class AnomalyDetector {
               'currIp': curr.ipAddress,
               'minutesBetween': diff.inMinutes,
             },
-          ));
+          ),
+        );
         }
       }
     }
@@ -141,7 +142,8 @@ class AnomalyDetector {
               'windowMinutes': span,
               'sourceIps': window.map((l) => l.ipAddress).toSet().toList(),
             },
-          ));
+          ),
+        );
           break; // one report per user
         }
       }
@@ -177,7 +179,8 @@ class AnomalyDetector {
             'distinctUsersAttempted': distinctUsers.length,
             'totalAttempts': entry.value.length,
           },
-        ));
+        ),
+      );
       }
     }
     return reports;
@@ -218,7 +221,8 @@ class AnomalyDetector {
                 'session1Start': _fmt(a.loginAt),
                 'session2Start': _fmt(b.loginAt),
               },
-            ));
+            ),
+          );
           }
         }
       }
@@ -252,7 +256,8 @@ class AnomalyDetector {
             'exportActionCount': exportCount,
             'totalActions': log.actions.length,
           },
-        ));
+        ),
+      );
       }
     }
     return reports;
@@ -280,7 +285,8 @@ class AnomalyDetector {
             'loginHourUtc': hour,
             'ipAddress': log.ipAddress,
           },
-        ));
+        ),
+      );
       }
     }
     return reports;
